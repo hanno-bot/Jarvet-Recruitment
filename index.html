@@ -129,6 +129,7 @@
 <a class="text-red-900 font-semibold border-b-2 border-red-900 font-sans text-sm uppercase tracking-wide" href="#teenused">Teenused</a>
 <a class="text-slate-600 hover:text-red-900 transition-colors duration-300 font-sans text-sm uppercase tracking-wide" href="#minust">Minust</a>
 <a class="text-slate-600 hover:text-red-900 transition-colors duration-300 font-sans text-sm uppercase tracking-wide" href="#soovitused">Soovitused</a>
+<a class="text-slate-600 hover:text-red-900 transition-colors duration-300 font-sans text-sm uppercase tracking-wide" href="#juhend">Tasuta juhend</a>
 </div>
 <a href="#kontakt" class="bg-primary hover:bg-primary-container text-on-primary px-6 py-2 text-sm uppercase tracking-widest transition-all active:scale-95">
                 Võta ühendust
@@ -313,7 +314,47 @@
 </div>
 </div>
 </section>
-<!-- Contact Form Section -->
+<!-- Lead Magnet Section -->
+<section class="py-32 px-8 bg-primary" id="juhend">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="inline-block px-3 py-1 bg-white/10 text-white text-xs font-medium tracking-[0.2em] uppercase mb-6">Tasuta juhend</span>
+<h2 class="text-5xl font-headline text-white mb-6">Värbamise Kunst</h2>
+<p class="text-xl text-white/80 font-light leading-relaxed mb-8">
+                        Praktiline juhend juhtidele: kuidas viia läbi STAR-intervjuusid, vältida levinumaid värbamisvigu ja luua kandidaatidele meeldejääv kogemus.
+                    </p>
+<ul class="space-y-3 text-white/70 text-sm">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-white/50 text-lg">check_circle</span> Struktureeritud intervjuu meetodid</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-white/50 text-lg">check_circle</span> 3 levinumat värbamisviga ja kuidas neid vältida</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-white/50 text-lg">check_circle</span> Onboarding checklist uuele töötajale</li>
+</ul>
+</div>
+<div class="bg-white p-12 shadow-lg">
+<h3 class="text-2xl font-headline text-primary mb-2">Lae juhend alla</h3>
+<p class="text-sm text-on-surface-variant mb-8">Sisesta oma e-post ja saadame juhendi kohe postkasti.</p>
+<form class="space-y-6" id="leadMagnetForm">
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Nimi</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-4 py-3 text-on-surface" placeholder="Teie nimi" id="lm-name" type="text" required/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">E-post</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-4 py-3 text-on-surface" placeholder="teie@email.ee" id="lm-email" type="email" required/>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-all" type="submit">
+                            Saada mulle juhend
+                        </button>
+<p class="text-[10px] text-on-surface-variant text-center">Me ei jaga teie andmeid. Saate ainult kasulikku sisu.</p>
+</form>
+<div id="leadMagnetSuccess" class="hidden text-center py-8">
+<span class="material-symbols-outlined text-primary text-5xl mb-4">check_circle</span>
+<h3 class="text-2xl font-headline text-primary mb-2">Aitäh!</h3>
+<p class="text-on-surface-variant">Juhend on teel teie postkasti.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
 <section class="py-32 px-8 bg-surface" id="kontakt">
 <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
 <div>
@@ -333,23 +374,8 @@
 </div>
 </div>
 <div class="bg-white p-12 shadow-sm">
-<form class="space-y-8" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-<div>
-<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Nimi</label>
-<input class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-4 py-3 text-on-surface" placeholder="Teie nimi" name="name" type="text" required/>
-</div>
-<div>
-<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">E-post</label>
-<input class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-4 py-3 text-on-surface" placeholder="teie@email.ee" name="email" type="email" required/>
-</div>
-<div>
-<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Sõnum</label>
-<textarea class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-4 py-3 text-on-surface" placeholder="Kuidas saan teid aidata?" name="message" rows="4" required></textarea>
-</div>
-<button class="w-full bg-primary text-on-primary py-5 text-sm font-bold uppercase tracking-widest hover:bg-primary-container transition-all" type="submit">
-                            Saada teade
-                        </button>
-</form>
+<!-- MailerLite embedded form for direct contact -->
+<div class="ml-embedded" data-form="MAXTms"></div>
 </div>
 </div>
 </section>
@@ -368,4 +394,38 @@
             </div>
 </div>
 </footer>
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2244978');
+</script>
+<!-- Lead Magnet Form Handler -->
+<script>
+    document.getElementById('leadMagnetForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name = document.getElementById('lm-name').value;
+        var email = document.getElementById('lm-email').value;
+        var nameParts = name.trim().split(' ');
+        var firstName = nameParts[0] || '';
+        var lastName = nameParts.slice(1).join(' ') || '';
+
+        fetch('https://assets.mailerlite.com/jsonp/2244978/forms/183854023232718458/subscribe', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                fields: {name: firstName, last_name: lastName, email: email},
+                groups: ['183854603754801008'],
+                ml_submit: 1,
+                antbot: ''
+            })
+        }).then(function() {
+            document.getElementById('leadMagnetForm').classList.add('hidden');
+            document.getElementById('leadMagnetSuccess').classList.remove('hidden');
+        }).catch(function() {
+            document.getElementById('leadMagnetForm').classList.add('hidden');
+            document.getElementById('leadMagnetSuccess').classList.remove('hidden');
+        });
+    });
+</script>
 </body></html>
